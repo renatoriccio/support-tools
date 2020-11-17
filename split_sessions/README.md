@@ -9,7 +9,7 @@ split_sessions.js
 _split_sessions.js_ is a script to be executed in Sharded Clusters to split the _config.system.sessions_ collection in as many chunks as Shards present in the Cluster at the moment of execution.
 
 To successfully execute the script, the following role must be granted to the user executing it:
- - db.createRole({role:"split-config-system-sessions","privileges":[{"resource":{"db":"config","collection":"system.sessions"},"actions":["splitchunk","splitVector","collStats"]},{"resource":{"db":"config","collection":"collections"},"actions":["update"]},{"resource":{"db":"config","collection":"system.sessions"},"actions":["movechunk"]}],roles:[]})
+ - db.createRole({role:"split-config-system-sessions","privileges":[{"resource":{"db":"config","collection":"system.sessions"},"actions":["splitChunk","splitVector","collStats"]},{"resource":{"db":"config","collection":"collections"},"actions":["update"]},{"resource":{"db":"config","collection":"system.sessions"},"actions":["moveChunk"]}],roles:[]})
 
 ### Usage
 
